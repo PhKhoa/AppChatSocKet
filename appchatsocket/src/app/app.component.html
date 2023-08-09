@@ -1,0 +1,44 @@
+<!-- <input type="text" [(ngModel)]="roomId" placeholder="Enter room id ..." />
+<input type="text" [(ngModel)]="userName" placeholder="Enter your name ..." />
+<button (click)="joinRoom(roomId)">Join Room</button> -->
+<!-- <input
+  type="text"
+  [(ngModel)]="newMassage"
+  placeholder="Enter your message ..."
+/>
+<button (click)="sendMessage(newMassage)">Send</button> -->
+<!-- 
+<div *ngFor="let msg of messages">
+  <p>From: {{ msg.from }}</p>
+  <p>Messages: {{ msg.msg }}</p>
+  <p>Date: {{msg.date}}</p>
+</div> -->
+
+
+<div class="container">
+  <div class="header">
+    <div style="margin-bottom: 15px;">
+      <h2 >Messages</h2>
+    </div>
+    
+    <div class="room_box">
+      <input type="text" [(ngModel)]="roomId" placeholder="Enter room id ..." />
+      <input type="text" [(ngModel)]="userName" placeholder="Enter your name ..." />
+      <button (click)="joinRoom(roomId)">Join Room</button>
+    </div>
+    <!-- <a href="#" title="Add Friend to this chat" (click)="joinRoom(roomId)">+</a> -->
+  </div>
+  <div class="chat-box" >
+    <div class="message-box left-img" *ngFor="let msg of messages">
+      <div class="message">
+        <span style="word-wrap: break-word;">{{msg.from}}</span>
+        <p style="word-wrap: break-word;">{{msg.msg}}</p>
+      </div>
+    </div>
+    
+  </div>
+  <div class="enter-message" style="padding: 20px; border-top: 1px solid grey;">
+    <input type="text" placeholder="Enter your message.." [(ngModel)]="newMassage"/>
+    <a href="#" class="send" (click)="sendMessage(newMassage)">Send</a>
+  </div>
+</div>
